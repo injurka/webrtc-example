@@ -77,7 +77,7 @@ async function connect() {
   lastRoomId.value = roomId
 
   const isSecure = location.protocol === 'https:'
-  const url = `${(isSecure ? 'wss://' : 'ws://') + location.host}/api/_ws?userId=${userId}`
+  const url = `${(isSecure ? 'ws://' : 'ws://') + location.host}/api/_ws?userId=${userId}`
 
   if (ws) {
     console.log('ws', 'Closing previous connection before reconnecting...')
