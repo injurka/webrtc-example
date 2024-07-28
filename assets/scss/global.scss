@@ -1,0 +1,32 @@
+@import './fonts.scss';
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 17px;
+
+  padding: 0;
+  margin: 0;
+
+  text-size-adjust: 100%;
+  overscroll-behavior: none;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  * {
+    color: #22263b;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    overscroll-behavior: none;
+  }
+}

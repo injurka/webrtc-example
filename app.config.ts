@@ -1,0 +1,25 @@
+export default defineAppConfig({
+  titleTemplate: '%s',
+  name: 'webrtc-example',
+  author: { name: 'webrtc-example' },
+  htmlAttrs: { 'lang': 'ru', 'data-theme': 'light' },
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'shortcut_icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+  ],
+  meta: [
+    { name: 'viewport', content: 'viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no' },
+    { name: 'title', content: 'webrtc-example' },
+    { hid: 'description', name: 'description', content: 'webrtc-example' },
+    { property: 'og:title', content: 'webrtc-example' },
+    { property: 'og:url', content: 'https://vercel.webrtc-example.app' },
+    { property: 'og:image', content: 'https://vercel.webrtc-example.app/open-graph.png' },
+    { property: 'og:image:width', content: '400' },
+    { property: 'og:image:height', content: '400' },
+    { property: 'og:description', content: 'webrtc-example' },
+    { name: 'twitter:card', content: 'summary' },
+  ],
+})

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "webrtc-example",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.1.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "bun": ">=1.1.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate",
+    "prepare": "nuxt prepare",
+    "analyze": "nuxt analyze",
+    "--------------------------------------------------------------------------------": "",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "----------------------------------------------------------------------------------": "",
+    "postinstall": "simple-git-hooks && nuxt prepare"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "vuetify-nuxt-module": "^0.16.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.24.0",
+    "@nuxt/eslint": "^0.4.0",
+    "@nuxt/types": "2.18.1",
+    "eslint": "^9.8.0",
+    "eslint-plugin-format": "^0.1.2",
+    "nuxt": "3.12.4",
+    "sass": "1.77.8",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "5.5.4",
+    "vue-tsc": "^2.0.29"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "cd source && bunx lint-staged && bun run typecheck",
+    "post-commit": "git status",
+    "post-merge": "cd source && bun i"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
