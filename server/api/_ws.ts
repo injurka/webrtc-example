@@ -62,6 +62,14 @@ export default defineWebSocketHandler({
   error(peer, error) {
     console.log('[ws] error', peer, error)
   },
+
+  upgrade() {
+    return {
+      headers: {
+        'x-powered-by': 'cross-ws',
+      },
+    }
+  },
 })
 
 function handleJoin(peer: Peer, payload: { roomId: string }) {
